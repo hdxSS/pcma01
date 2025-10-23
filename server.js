@@ -50,7 +50,7 @@ const authenticateToken = (req, res, next) => {
 // API Routes
 app.post('/api/login', async (req, res) => {
     const { password } = req.body;
-    const hashedPassword = '$2a$10$rOzJqQjQjQjQjQjQjQjQuOzJqQjQjQjQjQjQjQjQjQjQjQjQjQjQjQ';
+    const hashedPassword = '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy';
     
     try {
         const isValid = await bcrypt.compare(password, hashedPassword);
