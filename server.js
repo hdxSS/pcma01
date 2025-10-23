@@ -9,8 +9,18 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+const corsOptions = {
+    origin: ['http://localhost:3001', 'https://pcma01.onrender.com'],
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+};
+
+
+
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 app.use(express.json());
 
 // Serve static files (your index.html)
