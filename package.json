@@ -1,7 +1,7 @@
 {
-  "name": "machine-control-api",
+  "name": "machine-control",
   "version": "1.0.0",
-  "description": "API for Machine Control Panel",
+  "description": "Machine Control Panel",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
